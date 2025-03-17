@@ -12,9 +12,10 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::paginate(30);
+        // $posts = Post::paginate(30);
         // $laravelpost=Post::where('title','=','laravel')->get();
         //  dd('$posts');
+        $posts=Post::with('user')->paginate(10);
         return view('posts.index', ['posts' => $posts]);
     }
     public function trashedpostes()

@@ -66,6 +66,10 @@
                        <h3 class="text-lg font-medium text-gray-800">Email :- <span class="font-normal">{{$post->user?->email}}</span></h3>
                    </div>
                    <div>
+                    <h3 class="text-lg font-medium text-gray-800">Image :- <img src="{{ asset('storage/posts/' . $post->image) }}" alt="Post Image"
+                        class="w-48 h-auto rounded-md"></h3>
+                   </div>
+                   <div>
                        <h3 class="text-lg font-medium text-gray-800">Created At :- <span class="font-normal">{{$post->created_at->format('l jS \o\f F Y h:i:s A')}}</span></h3>
                    </div>
                    <div class="mt-3">
